@@ -53,19 +53,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
             prevEl:'.create__slider-prev',
         }
     })
+    
+})
 
-    // element argument can be a selector string
-    //   for an individual element
-
+document.addEventListener('load', ()=>{
     let container = document.querySelector('.edge__body');
     var msnry = new Masonry( '.grid', {
     // options
     });
-    // var msnryTwo = new Masonry( container, {
-    // // options
-    //     itemSelector: '.edge__item',
-    // });
-
-
-    
 })
