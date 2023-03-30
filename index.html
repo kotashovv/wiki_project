@@ -66,7 +66,7 @@
                                 </ul>
                             </nav>
                             <div class="header__action">
-                                <button class="main-btn blue-color">Get started</button>
+                                <button data-target=".popup-1" class="main-btn blue-color call-popup">Get started</button>
                                 <button class="main-btn red-color">Support center</button>
                             </div>
                             <div class="header__burger">
@@ -87,6 +87,7 @@
             <section class="hero">
                 <div class="container">
                     <div class="hero__body">
+                        
                         <div class="hero__text">
                             <h1>
                                 Hire Our Top-Tier Wikipedia Consultants Today
@@ -98,7 +99,7 @@
                                 A full-service Wikipedia agency delivering high-end solutions for individuals and business entities.
                             </p>
                             <div class="hero__action">
-                                <button class="main-btn blue-color">Get started</button>
+                                <button data-target=".popup-1" class="call-popup main-btn blue-color">Get started</button>
                                 <button class="main-btn red-color">Consult for free</button>
                             </div>
                         </div>
@@ -575,7 +576,74 @@
                 </div>
             </div>
         </footer>
+
     </div>
+
+    <div class="popup__window active">
+        <div class="popup__body">
+            <button class="close-popup"></button>
+            <article class="popup__item active popup-2">
+                <div class="title">
+                    <h5>
+                        Amazing Discount
+                    </h5>
+                    <p>
+                        Activate your <span>70%</span>
+                        coupon now
+                    </p>
+                </div>
+                <form action="#">
+                    <label>
+                        <span>Name</span>
+                        <input placeholder="Enter your name" type="text">
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input placeholder="Enter your Email" type="email">
+                    </label>
+                    <label>
+                        <span>Contact</span>
+                        <input placeholder="Telegram/WhatsApp" type="text">
+                    </label>
+                    <label>
+                        <span>Name</span>
+                        <textarea placeholder="Briefly describe your Wikipedia"></textarea>
+                    </label>
+                </form>
+            </article>
+            <article class="popup__item popup-1">
+                <button class="close-popup">
+                </button>
+                <form action="#">
+                    <h2 class="form-title">
+                        Check Your <span>Wikipedia Profile</span> Eligibility!
+                    </h2>
+                    <div class="form__body">
+                        <label>
+                            <span>
+                                Name
+                            </span>
+                            <input placeholder="Enter your name" type="text">
+                        </label>
+                        <label>
+                            <span>
+                                Email
+                            </span>
+                            <input placeholder="Ent er your Email" type="email">
+                        </label>
+                        <label>
+                            <span>
+                                Phone
+                            </span>
+                            <input placeholder="Enter your Phone" type="tel">
+                        </label>
+                        <button class="main-btn blue-color">Submit your request</button>
+                    </div>
+                </form>
+            </article>
+        </div>
+    </div>
+
     <script src="assets/libs/masonry.pkgd.min.js"></script>
     <script src="assets/libs/swiper-bundle.min.js"></script>
     <script src="scripts/app.js"></script>

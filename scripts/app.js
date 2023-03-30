@@ -1,4 +1,44 @@
 document.addEventListener('DOMContentLoaded', ()=>{
+
+    const callPopupBtns = document.querySelectorAll(".call-popup");
+    const popupWindow = document.querySelector('.popup__window')
+    const closeBtns = document.querySelectorAll('.close-popup');
+
+    if (callPopupBtns.length != null) {
+
+        if (closeBtns.length != null) {
+            closeBtns.forEach((item)=>{
+                item.addEventListener('click', ()=>{
+                    ClosePopup();
+                })
+            })
+        }
+
+        callPopupBtns.forEach(function(item) {
+            item.addEventListener('click', ()=>{
+                OpenPopup(item);
+            })
+        });
+
+       
+    };
+
+    function OpenPopup(item) {
+        let currentPopup = document.querySelector(item.getAttribute('data-target'));
+        currentPopup.classList.add('active');
+        popupWindow.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
+
+    function ClosePopup() {
+        let allPopups = document.querySelectorAll('.popup__item');
+        allPopups.forEach(function(item){
+            item.classList.remove('active');
+        });
+        popupWindow.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
     const pubsSlider = new Swiper('.pubs__slider', {
         slidesPerView: 6, 
         loop: true,
