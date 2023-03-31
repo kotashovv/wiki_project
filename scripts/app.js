@@ -163,11 +163,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
     function CloseMenu() {
         burgerBtn.classList.remove('active');
         mobileMenu.classList.remove('active');
-        document.body.style = 'hidden';
+        document.body.style = 'auto';
     };
     function OpenMenu() {
         burgerBtn.classList.add('active');
         mobileMenu.classList.add('active');
-        document.body.style = 'auto';
+        document.body.style = 'hiiden';
     };
 })
