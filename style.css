@@ -440,6 +440,26 @@ template {
   color: #0E62FF;
 }
 
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #091841 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #091841;
+  border-radius: 7px;
+  border: 3px solid #ffffff;
+}
+
 .header .container {
   max-width: 1370px;
 }
@@ -2078,12 +2098,12 @@ template {
 }
 
 .popup__item.popup-2 .title {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .popup__item.popup-2 .title h5 {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 35px;
   line-height: 1.1;
   color: #000;
@@ -2126,7 +2146,7 @@ template {
 .popup__item.popup-2 form label {
   display: block;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -2144,7 +2164,7 @@ template {
 .popup__item.popup-2 form label input {
   display: block;
   width: 100%;
-  padding: 20px;
+  padding: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 20px;
@@ -2158,7 +2178,7 @@ template {
 .popup__item.popup-2 form label textarea {
   border: 1px solid #091841;
   border-radius: 12px;
-  padding: 20px;
+  padding: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;

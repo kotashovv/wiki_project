@@ -80,10 +80,10 @@
         padding: 30px;
         font-family: $open;
         .title {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             h5 {
                 margin: 0;
-                margin-bottom: 10px;
+                margin-bottom: 5px;
                 font-size: 35px;
                 line-height: 1.1;
                 color: #000;
@@ -114,7 +114,7 @@
             label {
                 display: block;
                 width: 100%;
-                margin-bottom: 20px;
+                margin-bottom: 15px;
                 box-sizing: border-box;
                 span {
                     opacity: .7;
@@ -128,7 +128,7 @@
                 input {
                     display: block;
                     width: 100%;
-                    padding: 20px;
+                    padding: 15px;
                     box-sizing: border-box;
                     font-size: 20px;
                     color: $color;
@@ -140,7 +140,7 @@
                 textarea {
                     border: 1px solid $color;
                     border-radius: 12px;
-                    padding: 20px;
+                    padding: 15px;
                     box-sizing: border-box;
                     width: 100%;
                     display: block;
