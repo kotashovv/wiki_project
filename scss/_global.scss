@@ -51,6 +51,8 @@
         background-color: #000;
         height: 3px;
        border-radius: 3px;
+       opacity: .65;
+       transition: .35s ease;
     }
     &::after {
         content: '';
@@ -61,6 +63,8 @@
         background-color: #000;
         height: 3px;
        border-radius: 3px;
+       opacity: .65;
+       transition: .35s ease;
     }
     span {
         position: absolute;
@@ -70,6 +74,25 @@
         height: 3px;
        border-radius: 3px;
         background-color: #000;
+        opacity: .65;
+        transition: .35s ease;
+    }
+    &.active {
+        span {
+            opacity: 0;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+            left: 3px;
+            top: 12px;
+        }
+        &::after {
+            transform: rotate(-45deg);
+            width: calc(100% - 8px);
+            top: 12px;
+            left: 3px;
+        }
     }
 }
 
@@ -91,7 +114,7 @@
 
 * {
     scrollbar-width: auto;
-    scrollbar-color: $color #ffffff;
+    scrollbar-color: #091841be #ffffff;
 }
 
 /* Chrome, Edge, and Safari */
@@ -104,7 +127,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: $color;
+    background-color: #091841be;
     border-radius: 7px;
     border: 3px solid #ffffff;
 }

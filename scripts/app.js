@@ -109,4 +109,26 @@ document.addEventListener('DOMContentLoaded', ()=>{
         // options
         });
     }, 1000);
+
+
+    const burgerBtn = document.querySelector('.burger-btn');
+
+    if (burgerBtn) {
+        burgerBtn.addEventListener('click', (e)=>{
+            let target = e.target;
+
+            if (target.classList.add('active')) {
+                CloseMenu();
+            } else {
+                OpenMenu();
+            }
+        })
+    }
+
+    function CloseMenu() {
+        
+    };
+    function OpenMenu() {
+
+    };
 })

@@ -1,4 +1,117 @@
+
 .header {
+    position: relative;
+    &__mobile {
+        opacity: 0;
+        visibility: hidden;
+        transition: .45s ease;
+        position: absolute;
+        top: 0;
+        background-color: #fff;
+        z-index: 100;
+        display: block;
+        padding: 0 25px;
+        box-sizing: border-box;
+        overflow: auto;
+        width: 100%;
+        height: calc(100vh - 78px);
+        padding-top: 30px;
+        padding-bottom: 40px;
+        &.active {
+            top: 100%;
+            opacity: 1;
+            visibility: visible;
+        }
+        .mobile__action {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 35px;
+            button {
+                margin: 0 0 15px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .mobile__email {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                font-weight: 400;
+                    font-size: 18px;
+                    line-height: 1.2;
+                    color: #091841cc;
+                    margin-right: 5px;
+               +a {
+                    font-weight: 600;
+                    font-size: 18px;
+                    text-decoration: none;
+                    color: $color;
+                }
+            }
+        }
+        nav {
+            margin-bottom: 30px;
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                li {
+                    &.with-sublist {
+                        ul {
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: .35s ease;
+                        }
+                        a {
+                            width: fit-content;
+                            margin: 0 auto;
+                            position: relative;
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 14px;
+                                right: -10px;
+                                background-color: $color;
+                                height: 1px;
+                                width: 7px;
+                                transform: rotate(45deg);
+                            }
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 14px;
+                                right: -15px;
+                                background-color: $color;
+                                height: 1px;
+                                width: 7px;
+                                transform: rotate(-45deg);
+                            }
+                        }
+                    }
+                    margin-bottom: 5px;
+                    a {
+                        padding: 5px 10px;
+                        opacity: .75;
+                        box-sizing: border-box;
+                        display: block;
+                        position: relative;
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: $color;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
     .container {
         max-width: 1370px;
     }
