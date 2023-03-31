@@ -93,12 +93,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
             prevEl:'.create__slider-prev',
         }
     })
-    
-})
 
-document.addEventListener('load', ()=>{
-    let container = document.querySelector('.edge__body');
-    var msnry = new Masonry( '.grid', {
-    // options
-    });
+    // масонри сетка
+    // отложенное выполенние скрипта из-за неправильного позционирования
+    setTimeout(() => {
+        let container = document.querySelector('.edge__body');
+        var msnry = new Masonry( '.grid', {
+        // options
+        });
+    }, 1000);
 })
