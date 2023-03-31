@@ -28,6 +28,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
         currentPopup.classList.add('active');
         popupWindow.classList.add("active");
         document.body.style.overflow = "hidden";
+        addEventListener('keydown', (e)=>{
+            let target = e.key;
+            if (e.key == "Escape") {
+                ClosePopup();
+            }
+            
+        })
     }
 
     function ClosePopup() {

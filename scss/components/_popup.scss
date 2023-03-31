@@ -25,6 +25,7 @@
     &__body {
         &::before {
             content: '';
+            pointer-events: none;
             position: absolute;
             height: 100%;
             width: 100%;
@@ -43,8 +44,12 @@
             background-size: 24px;
             background-position: center;
             background-repeat: no-repeat;
+            z-index: 10;
             background-color: transparent;
             border: none;
+            @media(max-width:768px) {
+                background-image: url(assets/imgs/close.svg);
+            }
         }
         position: relative;
         z-index: 100;
@@ -172,9 +177,20 @@
                 }
             }
         }
+
+        @media(max-width:768px) {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            max-height: 100vh;
+            border-radius: 0;
+            padding-top: 50px;
+        }
     }
 
     &__item.popup-1 {
+        z-index: 100;
         position: relative;
         width: 100%;
         height: 100%;
