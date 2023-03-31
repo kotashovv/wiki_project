@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             }
             
         })
+        CloseMenu();
     }
 
     function ClosePopup() {
@@ -45,6 +46,40 @@ document.addEventListener('DOMContentLoaded', ()=>{
         popupWindow.classList.remove('active');
         document.body.style.overflow = 'auto';
     }
+
+    // showlist in mobile menu
+
+        const showListBtn = document.querySelectorAll('.show-list');
+
+        if (showListBtn.length != 0) {
+            showListBtn.forEach(function(item){
+                item.addEventListener('click', (e)=>{
+                    e.preventDefault();
+                    let target = e.target;
+                    if (target.classList.contains('active')) {
+                        HiddenList(target);
+                    } else {
+                        ShowList(target);
+                    }
+                })
+            });
+        }
+
+        function ShowList(item) {
+            item.classList.add('active');
+            let currentList = item.nextElementSibling;
+            currentList.style.maxHeight = currentList.scrollHeight + 'px';
+            currentList.classList.add('active');
+        }
+        function HiddenList(item) {
+            item.classList.remove('active');
+            let currentList = item.nextElementSibling;
+            currentList.style.maxHeight = 0;
+            currentList.classList.remove('active');
+        }
+
+
+    //end
 
     const pubsSlider = new Swiper('.pubs__slider', {
         slidesPerView: 6, 
@@ -112,12 +147,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 
     const burgerBtn = document.querySelector('.burger-btn');
+    const mobileMenu = document.querySelector('.header__mobile');
 
     if (burgerBtn) {
         burgerBtn.addEventListener('click', (e)=>{
             let target = e.target;
-
-            if (target.classList.add('active')) {
+            if (target.classList.contains('active')) {
                 CloseMenu();
             } else {
                 OpenMenu();
@@ -126,9 +161,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
 
     function CloseMenu() {
-        
+        burgerBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style = 'hidden';
     };
     function OpenMenu() {
-
+        burgerBtn.classList.add('active');
+        mobileMenu.classList.add('active');
+        document.body.style = 'auto';
     };
 })

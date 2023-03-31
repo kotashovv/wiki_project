@@ -70,7 +70,7 @@
                             overflow: hidden;
                             transition: .35s ease;
                         }
-                        a {
+                        >a {
                             width: fit-content;
                             margin: 0 auto;
                             position: relative;
@@ -83,6 +83,7 @@
                                 height: 1px;
                                 width: 7px;
                                 transform: rotate(45deg);
+                                transition: .45s ease;
                             }
                             &::after {
                                 content: '';
@@ -93,6 +94,17 @@
                                 height: 1px;
                                 width: 7px;
                                 transform: rotate(-45deg);
+                                transition: .45s ease;
+                            }
+
+                            &.active {
+                                &::before {
+                                    transform: rotate(-45deg);
+                                }
+
+                                &::after {
+                                    transform: rotate(45deg);
+                                }
                             }
                         }
                     }

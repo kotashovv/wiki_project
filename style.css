@@ -607,7 +607,7 @@ template {
   transition: .35s ease;
 }
 
-.header__mobile nav ul li.with-sublist a {
+.header__mobile nav ul li.with-sublist > a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -615,7 +615,7 @@ template {
   position: relative;
 }
 
-.header__mobile nav ul li.with-sublist a::before {
+.header__mobile nav ul li.with-sublist > a::before {
   content: '';
   position: absolute;
   top: 14px;
@@ -626,9 +626,12 @@ template {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+  -webkit-transition: .45s ease;
+  -o-transition: .45s ease;
+  transition: .45s ease;
 }
 
-.header__mobile nav ul li.with-sublist a::after {
+.header__mobile nav ul li.with-sublist > a::after {
   content: '';
   position: absolute;
   top: 14px;
@@ -639,6 +642,21 @@ template {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  -webkit-transition: .45s ease;
+  -o-transition: .45s ease;
+  transition: .45s ease;
+}
+
+.header__mobile nav ul li.with-sublist > a.active::before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header__mobile nav ul li.with-sublist > a.active::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .header__mobile nav ul li a {
