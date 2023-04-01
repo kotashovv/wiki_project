@@ -168,6 +168,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     function OpenMenu() {
         burgerBtn.classList.add('active');
         mobileMenu.classList.add('active');
-        document.body.style = 'hiiden';
+        document.body.style = 'hidden';
     };
 })
