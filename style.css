@@ -493,6 +493,10 @@ template {
   border: 3px solid #ffffff;
 }
 
+body.hidden {
+  overflow: hidden;
+}
+
 .header {
   position: relative;
 }
